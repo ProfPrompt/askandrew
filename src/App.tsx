@@ -16,8 +16,8 @@ const HOWTO_HAPPY_IMAGE_URL = 'https://raw.githubusercontent.com/ProfPrompt/aska
 const Watermark = () => {
   const spans = useMemo(() => {
     const list = [
-      "APPS", "WEBSITES", "LIVE CODING", "AUTOMATION", 
-      "DESIGN", "TRANSLATION", "DEBUGGING", "SASS, "WORKSHOPS", "TRAINING"
+      "APPS", "WEBSITES", "CODING", "AUTOMATION", 
+      "DESIGN","WORKSHOPS", "TRAINING"
     ];
     return Array.from({ length: 30 }).map((_, i) => {
       let shuffled = [...list].sort(() => Math.random() - 0.5);
