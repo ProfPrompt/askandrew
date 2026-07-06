@@ -17,7 +17,7 @@ const Watermark = () => {
   const spans = useMemo(() => {
     const list = [
       "APPS", "WEBSITES", "LIVE CODING", "AUTOMATION", 
-      "DESIGN", "TRANSLATION", "DEBUGGING", "SASS"
+      "DESIGN", "TRANSLATION", "DEBUGGING", "SASS, "WORKSHOPS", "TRAINING"
     ];
     return Array.from({ length: 30 }).map((_, i) => {
       let shuffled = [...list].sort(() => Math.random() - 0.5);
