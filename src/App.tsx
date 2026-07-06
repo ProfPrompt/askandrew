@@ -22,17 +22,25 @@ const Watermark = () => {
     return Array.from({ length: 30 }).map((_, i) => {
       // Create a shuffled copy for each block so it feels randomized
       let shuffled = [...list].sort(() => Math.random() - 0.5);
+      
+      const offsetClass = 
+        i % 3 === 0 ? 'translate-x-12' : 
+        i % 3 === 1 ? '-translate-x-12' : 
+        'translate-x-0';
+
       return (
-        <span key={i} className={`mx-4 whitespace-nowrap ${i % 3 === 0 ? 'ml-64' : i % 3 === 1 ? '-ml-48' : 'ml-12'}`}>
-          {shuffled.join(" • ") + " • "}
-        </span>
+        <div key={i} className={`w-full overflow-hidden text-center whitespace-nowrap ${offsetClass}`}>
+          <span className="inline-block tracking-widest select-none">
+            {shuffled.join(" • ") + " • "}
+          </span>
+        </div>
       );
     });
   }, []);
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] h-[200%] transform -rotate-6 opacity-10 font-black text-4xl leading-loose flex flex-wrap justify-center items-center select-none text-white">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] h-[200%] transform -rotate-6 opacity-10 font-black text-4xl leading-loose flex flex-col justify-center items-center select-none text-white">
         {spans}
       </div>
     </div>
