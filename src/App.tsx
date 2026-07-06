@@ -10,7 +10,7 @@ const ANDREW_AVATAR_URL = 'https://imgx.vipkidstatic.com/global/ter/teacher/avat
 const CONFUSED_MAN_IMAGE_URL = 'https://raw.githubusercontent.com/ProfPrompt/askandrew.github.io/refs/heads/main/assets/confusedman.jpg';
 const HAPPY_MAN_IMAGE_URL = 'https://raw.githubusercontent.com/ProfPrompt/askandrew.github.io/refs/heads/main/assets/happyman.jpg';
 const HOWTO_SAD_IMAGE_URL = 'https://raw.githubusercontent.com/ProfPrompt/askandrew.github.io/refs/heads/main/assets/howtosad.jpeg';
-const HOWTO_DREW_IMAGE_URL = 'https://raw.githubusercontent.com/ProfPrompt/askandrew.github.io/refs/heads/main/assets/howtodrew.jpeg';
+const HOWTO_DREW_IMAGE_URL = 'https://imgx.vipkidstatic.com/global/ter/teacher/avatar/1619214/6e1cafeb00cc472b9a366c08fb82fa9e.png';
 const HOWTO_HAPPY_IMAGE_URL = 'https://raw.githubusercontent.com/ProfPrompt/askandrew.github.io/refs/heads/main/assets/howtohappy.jpeg';
 
 const Watermark = () => {
