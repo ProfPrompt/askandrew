@@ -236,7 +236,7 @@ export default function App() {
                 <div className="space-y-6 text-base sm:text-lg text-gray-700 leading-relaxed font-medium">
                   <div className="bg-brand-primary/5 p-6 sm:p-8 rounded-2xl border-l-4 border-brand-secondary italic text-gray-800">
                     <p>
-                      "I'm the guy you hire when you want to build an app or optimize a workflow this afternoon without losing your mind. Instead of disappearing for months, we sit down live and build it together on screen. Because of my background in education, I don't just hand you the code and wish you luck. You actually learn how your system works, so you can stop fighting your tools and finally scale your business."
+                      "Think of me as your shortcut to getting things done. I work with founders, creators, and everyday people to build web apps, knock out repetitive tasks, and set up efficient digital workspaces. We do it all live, together on screen, so you don't have to wait months for a developer to text you back. Plus, with my background as an educator, I make sure you actually understand your system so you can take total control of your business."
                     </p>
                   </div>
                 </div>
