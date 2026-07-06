@@ -24,13 +24,13 @@ const Watermark = () => {
       let shuffled = [...list].sort(() => Math.random() - 0.5);
       
       const offsetClass = 
-        i % 3 === 0 ? 'translate-x-12' : 
-        i % 3 === 1 ? '-translate-x-12' : 
+        i % 3 === 0 ? 'translate-x-16' : 
+        i % 3 === 1 ? '-translate-x-16' : 
         'translate-x-0';
 
       return (
-        <div key={i} className={`w-full overflow-hidden text-center whitespace-nowrap ${offsetClass}`}>
-          <span className="inline-block tracking-widest select-none">
+        <div key={i} className={`w-full overflow-hidden text-center whitespace-nowrap py-3 ${offsetClass}`}>
+          <span className="inline-block tracking-widest select-none leading-none">
             {shuffled.join(" • ") + " • "}
           </span>
         </div>
@@ -40,7 +40,7 @@ const Watermark = () => {
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] h-[200%] transform -rotate-6 opacity-10 font-black text-4xl leading-loose flex flex-col justify-center items-center select-none text-white">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] h-[200%] transform -rotate-6 opacity-10 font-black text-6xl flex flex-col justify-center items-center select-none text-white">
         {spans}
       </div>
     </div>
