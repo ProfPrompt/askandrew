@@ -25,24 +25,24 @@ export const SHOWCASE_PROJECTS = {
       description: "A fast, intuitive, minimal habit tracker that logs exactly what you are doing. Say no to productivity bloat.",
       image: "https://raw.githubusercontent.com/AndrewGWatts/AndrewGWatts.github.io/main/asset/placeholder-loading-now.png",
       alt: "Loading Now web application project screenshot showing custom web development work",
-      link: "https://github.com/AndrewGWatts/loading-now",
-      repo: "https://github.com/AndrewGWatts/loading-now"
+      link: "https://loadingnowapp.github.io",
+      repo: "https://github.com/loadingnowapp/loadingnowapp.github.io"
     },
     {
       title: "Advantaged Player Trainer",
       description: "An advanced, interactive Blackjack basic strategy trainer to refine skills and calculate edge. Modern and fast.",
       image: "https://raw.githubusercontent.com/AndrewGWatts/AndrewGWatts.github.io/main/asset/placeholder-advantaged-player-webapp.png",
       alt: "Advantaged Player Trainer web app screenshot showing interactive dashboard and analytics",
-      link: "https://github.com/AndrewGWatts/Advantaged-Player",
-      repo: "https://github.com/AndrewGWatts/Advantaged-Player"
+      link: "https://advantagedplayer.github.io",
+      repo: "https://github.com/advantagedplayer/advantagedplayer.github.io"
     },
     {
       title: "Astro Dash",
       description: "A personalized, ambient dashboard providing weather, celestial events, and your local horizon data at a glance.",
       image: "https://raw.githubusercontent.com/AndrewGWatts/AndrewGWatts.github.io/main/asset/astro_dash_placeholder.png",
       alt: "Astro Dash dashboard screenshot showing custom AI integration and data visualization",
-      link: "https://github.com/AndrewGWatts/astro-dash",
-      repo: "https://github.com/AndrewGWatts/astro-dash"
+      link: "https://astrodashapp.github.io",
+      repo: "https://github.com/astrodashapp/astrodashapp.github.io"
     }
   ],
   webDesign: [
@@ -51,21 +51,24 @@ export const SHOWCASE_PROJECTS = {
       description: "A dark, highly stylized landing page for an audio engineer. Built to showcase a portfolio of top-tier podcasts.",
       image: "https://raw.githubusercontent.com/AndrewGWatts/AndrewGWatts.github.io/main/asset/podcast-producer-site.png",
       alt: "Podcast Producer Profile website design showcasing clean responsive layout",
-      link: "https://github.com/AndrewGWatts/AndrewGWatts.github.io"
+      link: "https://LindsayLafreniere.github.io",
+      repo: "https://github.com/LindsayLafreniere/LindsayLafreniere.github.io"
     },
     {
       title: "Developer Portfolio",
       description: "A minimalist, high-contrast terminal-inspired portfolio designed for software engineers who want their code to speak.",
       image: "https://raw.githubusercontent.com/AndrewGWatts/AndrewGWatts.github.io/main/asset/developer-portfolio-site.png",
       alt: "Developer Portfolio website design showing modern aesthetic and dark mode styling",
-      link: "https://github.com/AndrewGWatts/AndrewGWatts.github.io"
+      link: "https://AndrewGWatts.github.io",
+      repo: "https://github.com/AndrewGWatts/AndrewGWatts.github.io"
     },
     {
       title: "LinkSprout",
       description: "A minimalist, modern \"link-in-bio\" page designed to get your digital footprint organized without the bloat. It's the perfect landing page for when you need a place to stash your links, look professional, and stop sending people a disorganized mess of URLs.",
       image: "https://raw.githubusercontent.com/AndrewGWatts/AndrewGWatts.github.io/main/asset/linksprout-thumbnail.png",
       alt: "LinkSprout modern minimalist link-in-bio landing page template screenshot",
-      link: "https://linksprout.github.io"
+      link: "https://linksprout.github.io",
+      repo: "https://github.com/LinkSprout/LinkSprout.github.io"
     }
   ]
 };
