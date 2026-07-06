@@ -28,8 +28,8 @@ const Watermark = () => {
         'translate-x-0';
 
       return (
-        <div key={i} className={`w-full whitespace-nowrap text-center ${offsetClass}`}>
-          <span className="inline-block tracking-widest select-none py-4 leading-normal">
+        <div key={i} className={`w-full whitespace-nowrap text-center my-1 ${offsetClass}`}>
+          <span className="inline-block tracking-widest select-none leading-[0.8] h-[1em]">
             {shuffled.join(" • ") + " • "}
           </span>
         </div>
@@ -39,7 +39,7 @@ const Watermark = () => {
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[250%] h-[250%] transform -rotate-6 opacity-10 font-black text-6xl flex flex-col justify-center items-center select-none text-white overflow-visible">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[250%] h-[250%] transform -rotate-6 opacity-10 font-black text-8xl flex flex-col justify-center items-center select-none text-white overflow-visible">
         {spans}
       </div>
     </div>
