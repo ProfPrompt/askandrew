@@ -16,9 +16,8 @@ const HOWTO_HAPPY_IMAGE_URL = 'https://raw.githubusercontent.com/ProfPrompt/aska
 const Watermark = () => {
   const spans = useMemo(() => {
     const list = [
-      "APP PROTOTYPING", "MVP DEVELOPMENT", "AI WORKSPACES", "CUSTOM WORKFLOWS", 
-      "TECHNICAL ROADMAPS", "APP UPDATES", "RAPID SPRINTS", "DEBUGGING", 
-      "LIVE CODING", "SYSTEM ARCHITECTURE"
+      "APPS", "WEBSITES", "LIVE CODING", "AUTOMATION", 
+      "DESIGN", "TRANSLATION", "DEBUGGING", "SASS"
     ];
     return Array.from({ length: 30 }).map((_, i) => {
       // Create a shuffled copy for each block so it feels randomized
@@ -190,11 +189,11 @@ export default function App() {
                 <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black leading-none mb-6 uppercase tracking-tight text-white">
                   Ask Andrew
                 </h1>
-                <h2 className="text-lg sm:text-xl lg:text-2xl font-bold tracking-tight text-brand-secondary mb-4">
-                  Bringing your ideas to life and optimizing your workflows live.
+                <h2 className="text-lg sm:text-xl lg:text-2xl font-bold tracking-tight text-white mb-4">
+                  Bringing your ideas to life.
                 </h2>
                 <p className="hidden sm:block text-base lg:text-lg mt-5 text-white/80 max-w-lg leading-relaxed font-medium">
-                  We bridge the expert gap. As an educator and technical builder, I partner with founders, creators, and professionals to translate their unique visions into interactive web software or private, highly efficient digital workspaces.
+                  I team up with founders, creators, and everyday people to handle the technical heavy lifting. Whether you want to automate boring, repetitive tasks or build a custom web app from scratch, I'll work right alongside you to get it done.
                 </p>
               </div>
               <div className="flex flex-col lg:flex-row items-stretch lg:items-center gap-3 lg:gap-4 w-full lg:w-auto">
