@@ -102,7 +102,7 @@ export const HERO_SECTION = {
   ctaSecondaryLink: "#services",
   
   // Custom illustration / mockup representing the hero focus
-  heroImage: "https://raw.githubusercontent.com/ProfPrompt/askandrew/refs/heads/main/herowface.png"
+  heroImage: "https://raw.githubusercontent.com/ProfPrompt/askandrew.github.io/refs/heads/main/assets/herowface.png"
 };
 
 // ============================================================================
