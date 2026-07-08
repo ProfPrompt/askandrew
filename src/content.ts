@@ -78,27 +78,27 @@ export const WATERMARK = {
 
 export const HERO_SECTION = {
   headline: "Ask Andrew",
-  tagline: "Custom Web Apps & AI Strategy",
+  tagline: "Custom Web Apps & Practical AI Support",
   
   // Rotating phrases in the typing-loop sub-header
   phrases: [
-    "to build your website",
-    "to design your app",
-    "to organize your workflow",
-    "to teach your AI",
+    "to build your new website",
+    "to create your profile site",
+    "to bring your app idea to life",
+    "to teach you how to use AI",
     "to automate your daily tasks",
-    "to eliminate manual data entry",
-    "to connect your scattered tools",
-    "to scale your digital ideas"
+    "to clean up your workflows",
+    "to run a fun workshop",
+    "to stop manual copy-pasting"
   ],
   
-  description: "I team up with founders, creators, and everyday people to handle the technical heavy lifting. Whether you want to automate boring, repetitive tasks, build a custom web app, or just finally stop doing data entry manually, I'll get it done.",
-  descriptionMobile: "I team up with founders, creators, and everyday people to handle your technical heavy lifting. I'll build your custom web apps, automate boring tasks, and eliminate manual data entry.",
+  description: "I help you build simple websites, create personal profiles, design friendly app prototypes, and automate repetitive daily work in under a week. No complex software jargon, no endless meetings, just real tools that work.",
+  descriptionMobile: "I help you build simple websites, create profiles, design friendly app prototypes, and automate daily work in under a week—without the technical jargon.",
   
   ctaPrimaryText: "Let's Get Started",
   ctaPrimaryLink: "/book",
   
-  ctaSecondaryText: "See How It Works",
+  ctaSecondaryText: "See My Services",
   ctaSecondaryLink: "#services",
   
   // Custom illustration / mockup representing the hero focus
@@ -111,7 +111,7 @@ export const HERO_SECTION = {
 
 export const ABOUT_SECTION = {
   title: "About Andrew",
-  quote: "Think of me as your shortcut to getting things done. I work with founders, creators, and everyday people to build web apps, knock out repetitive tasks, and set up digital workspaces that don't make you want to throw your laptop out the window. I do most of it live on screen, so you don't have to wait months for a developer to text you back. Plus, I actually want you to understand how it all works so you don't have to keep paying me to fix it.",
+  quote: "I help small business owners, startups, and curious builders turn their ideas into custom websites, simple apps, and smart automations. No heavy technical jargon, no six-month roadmaps, and no corporate fluff. I build what you need in under a week, show you exactly how to manage it yourself, and explain everything in plain, friendly English.",
   
   avatarUrl: "https://imgx.vipkidstatic.com/global/ter/teacher/avatar/1619214/6e1cafeb00cc472b9a366c08fb82fa9e.png",
   
@@ -128,8 +128,8 @@ export const ABOUT_SECTION = {
 // ============================================================================
 
 export const MID_PAGE_CTA = {
-  title: "Ready to stop wasting time?",
-  buttonText: "Book a Consultation",
+  title: "READY TO GET YOUR TIME BACK?",
+  buttonText: "Book a Session with Andrew",
   buttonLink: "/book"
 };
 
@@ -138,10 +138,10 @@ export const MID_PAGE_CTA = {
 // ============================================================================
 
 export const IDEAS_SECTION = {
-  title: "Bring Your Ideas to Life.",
-  paragraph1: "You've got that brilliant web app or tool concept, but lack the coding background to build it. Or maybe you're wasting hours trying to build with AI code assistants on your own, getting caught in endless, frustrating bug loops.",
-  paragraph2: "Stop talking about your app idea. Let's build it this afternoon. I combine traditional programming foundations with state-of-the-art AI development environments to spin up gorgeous, modern apps in record time.",
-  buttonText: "Book a Call With Andrew",
+  title: "Bring Your Ideas to Life",
+  paragraph1: "Have a brilliant idea for a website, a personal portfolio, or a new digital app, but don't know where to start? Or maybe you're wasting hours wrestling with AI on your own, getting caught in confusing, endless loops that go nowhere.",
+  paragraph2: "Let's build a clean, working prototype together. Whether you need a slick site for your brand or a functional demo to show investors, we can bring it to life in under a week—no tech background required.",
+  buttonText: "Book a Friendly Session",
   buttonLink: "/book",
   
   // Side comparison images
@@ -156,7 +156,7 @@ export const IDEAS_SECTION = {
 // ============================================================================
 
 export const SECONDARY_PROTOTYPE_CTA = {
-  title: "Get an interactive prototype by tomorrow.",
+  title: "GET A WORKING WEBSITE BY NEXT WEEK.",
   buttonText: "Book a Live Session",
   buttonLink: "/book"
 };
@@ -166,10 +166,10 @@ export const SECONDARY_PROTOTYPE_CTA = {
 // ============================================================================
 
 export const EASIER_WAY_SECTION = {
-  title: "There has to be an easier way.",
-  paragraph1: "Need a highly tailored AI workspace that actually understands your specific industry data, templates, and operational rules so you can stop prompting from scratch every day? That's where I come in.",
-  paragraph2: "I'll sit down with you, compile your business data, templates, and brand voice guidelines, and build a private, custom AI workspace. You'll leave our session with a fully configured environment pre-loaded with your operational rules, so you can actually get back to work.",
-  buttonText: "Book a Call With Andrew",
+  title: "THERE HAS TO BE AN EASIER WAY.",
+  paragraph1: "Tired of copy-pasting the exact same prompts into ChatGPT every morning? Or struggling to get the AI to understand your business style, templates, and spreadsheets?",
+  paragraph2: "We can design a simple, private AI workspace and set up smart automations so your spreadsheets, emails, and tools update themselves. You'll leave our session with a comfortable setup that saves you hours of manual typing.",
+  buttonText: "Automate My Tasks",
   buttonLink: "/book",
   
   // Desk lifestyle images (sad vs. happy)
@@ -240,67 +240,67 @@ export const PRODUCTS: Record<string, Product> = {
   // Main Products
   'live-prototyping': {
     id: 'live-prototyping',
-    title: 'Live Web App Prototyping',
-    timeLabel: '2-Hour Live + Off-Screen Delivery within 48 hrs',
-    price: 'Starting from $249',
-    description: "Bring your concept and API keys. We'll start with a 2-hour intensive session of brainstorming, validation, and live development, followed by off-screen enhancements to deliver your working web app.",
-    includes: "The final delivery of a working web app, and I'll fix any bugs that pop up over the next two weeks.",
+    title: 'Custom Websites, Apps & Digital Tools',
+    timeLabel: 'Interactive Web Prototype Sprint',
+    price: 'Starting from $599',
+    description: "Need a slick new website, app, or tool for your company, brand, or even just to manage your dog's Instagram? I'll use AI to create exactly what you need and want, and then teach you how to manage it yourself so you don't have to keep paying developers to make small updates.",
+    includes: "A functional, live-hosted web app or site, plus clear instructions so you can easily run it.",
     icon: 'Sparkles',
-    linkText: 'Book now',
+    linkText: 'Book a Sprint',
     link: '/book/live-prototyping'
   },
   'custom-workspace': {
     id: 'custom-workspace',
-    title: 'Custom AI Workspace Setup',
-    timeLabel: '2-Hour Live + Off-Screen Delivery within 48 hrs',
-    price: 'Starting from $149',
-    description: "Stop pasting the same prompts every day. I'll build a private, tailored AI environment live on a call to automate your repetitive writing and daily data tasks.",
-    includes: "A private AI workspace that actually knows how you do things, so you don't have to explain yourself every time.",
+    title: 'Optimizing AI for Work & Daily Life',
+    timeLabel: 'Save Hours of Manual Work',
+    price: 'Starting from $299',
+    description: "From daily meal planning to complex spreadsheet hacking, AI can make life so much easier. Let me show you how to use AI to eliminate boring tasks, streamline your manual workflows, and save you hours of typing every single week.",
+    includes: "Private, custom-tailored prompts and automated workflows that you can copy-paste and use instantly.",
     icon: 'Bot',
-    linkText: 'Book now',
+    linkText: 'Get Automated',
     link: '/book/custom-workspace'
   },
   'app-updates': {
     id: 'app-updates',
-    title: 'App Updates & Debugging',
-    timeLabel: '20-Min Call + Delivery within 48 hrs',
-    price: '$49',
-    description: "Suitable for smaller tasks, one-off website or app maintenance. For repeat customers only. 20-min call to discuss needs + deliverable within 48 hrs of booking.",
-    includes: "Quick resolution of bugs or small feature updates, with direct collaboration and 48hr turnaround.",
+    title: 'General Tech Support & Fixes',
+    timeLabel: 'Quick Sync + Delivery within 48 hours',
+    price: '$75',
+    description: "Got a minor bug, need a small update, or have a general technical issue that is slowing you down? I am here for fast-tracked troubleshooting, simple hosting setups, and friendly tech care.",
+    includes: "Rapid resolution of website or app issues completed with a 48-hour turnaround.",
     icon: 'Wrench',
-    linkText: 'Book now',
+    linkText: 'Book a Tech Fix',
     link: '/book/app-updates'
   },
   'technical-roadmap': {
     id: 'technical-roadmap',
-    title: 'Technical Feasibility & Roadmap',
-    timeLabel: '45 Min',
-    price: '$65',
-    description: "Have a raw app or tool idea? Let's vet it before you waste your savings on an agency. I'll map out your concept, pick your tech stack, and design a lean build strategy.",
-    includes: "A straightforward 45-minute technical plan and zero corporate fluff.",
+    title: 'Technical Feasibility & Strategy',
+    timeLabel: '45-Minute Brainstorming Call',
+    price: '$95',
+    description: "Have a unique app idea or an AI tool concept? Let's stress-test the logic before you spend your savings or months of time. We will vet your concept, map out how it works, and design a lean, fast strategy to bring it to life.",
+    includes: "A clear, conversational 45-minute blueprint and an execution plan with zero tech jargon.",
     icon: 'Map',
-    linkText: 'Book now',
+    linkText: 'Book a Strategy Call',
     link: '/book/technical-roadmap'
   },
   
   // Additional / Secondary Products
   'ai-workshops': {
     id: 'ai-workshops',
-    title: 'AI & Automation Workshops',
+    title: 'AI Education & Workshops',
     timeLabel: '45-Min Lesson',
-    price: '$65',
-    description: "Personalized 45-minute lessons on how to effectively use AI in your daily life and workflows. These sessions are tailored specifically to your goals and are designed as low-cost, high-value ways to interact and learn with me.",
-    includes: "Personalized lesson, dynamic prompt library, custom AI-assisted workflow guides.",
+    price: '$95',
+    description: "Does AI scare you? Unpack that with me through friendly, one-on-one sessions, active workshops, or group training. Learn how to use it, the pitfalls, the ethics, and how to make it highly practical for your business.",
+    includes: "A live personalized training session, a custom prompt library, and actionable guides.",
     icon: 'BookOpen',
-    linkText: 'Book a Workshop Session',
+    linkText: 'Book a Session',
     link: '/book/ai-strategy-workshops'
   },
   'managed-hosting': {
     id: 'managed-hosting',
     title: 'Managed Web Care & Hosting',
     timeLabel: 'Ongoing Monthly Support',
-    price: 'Starting at $50/mo',
-    description: "Keep your site fast, secure, and up-to-date while you focus on your business. Forget about managing DNS settings, SSL certificates, or server crashes. I handle the technical \"under-the-hood\" stuff so your site stays online and performing perfectly.",
+    price: 'Starting from $50/mo',
+    description: "Keep your site fast, safe, and up-to-date. Forget about DNS settings, SSL certificates, or server crashes. I handle the under-the-hood stuff so you can focus on running your business.",
     includes: "High-performance hosting, automated daily backups, security monitoring, and small monthly updates.",
     icon: 'Server',
     linkText: 'Inquire About Hosting',
@@ -308,32 +308,32 @@ export const PRODUCTS: Record<string, Product> = {
   },
   'speaking': {
     id: 'speaking',
-    title: 'Speaking & Educational Engagements',
-    timeLabel: 'Variable Duration',
-    price: 'Starting from $500',
-    description: "Need an engaging, jargon-free speaker for your next event, podcast, or team retreat? I break down complex technical topics into clear, actionable, and—dare I say—actually fun insights. Whether it's the future of web development or how to stop wasting time with ineffective AI, I'll help your audience walk away with genuine \"aha!\" moments.",
-    includes: "Engaging interactive session for your next event, podcast, or team retreat.",
+    title: 'Speaking, Education... & Chess!',
+    timeLabel: 'Custom Duration',
+    price: 'Starting from $750',
+    description: "Need an engaging, jargon-free speaker to explain technology to your team, or want to master the chessboard? I offer fun presentations, group training events, and friendly chess masterclasses to sharpen your critical thinking.",
+    includes: "Interactive educational sessions or custom chess lessons for all skill levels.",
     icon: 'Mic',
-    linkText: 'Check My Availability',
+    linkText: 'Check Availability',
     link: '/book/speaking'
   },
   'custom-integration': {
     id: 'custom-integration',
-    title: 'Custom API & Systems Integration',
+    title: 'Connecting Your Software Stack',
     timeLabel: 'Tailored Scope',
-    price: 'Starting from $225',
-    description: "Tired of manually moving data between your CRM, email, and databases? I build robust, custom API integrations and automation pipelines that connect your scattered software stack so they actually talk to each other.",
-    includes: "Robust custom API pipelines connecting your scattered software stack to save hours of manual data entry.",
+    price: 'Starting from $399',
+    description: "Tired of manually copy-pasting data between scattered windows? I build simple, custom connections so your spreadsheets, email, and CRMs talk to each other automatically without manual hassle.",
+    includes: "Clean, custom connections that sync your favorite digital tools and eliminate double-entry.",
     icon: 'GitMerge',
-    linkText: 'Book a Discovery Call',
+    linkText: 'Inquire About Integration',
     link: '/book/custom-integration'
   },
   'other': {
     id: 'other',
-    title: 'Custom / Other Request',
+    title: 'Custom Requests & Help',
     timeLabel: 'Custom Duration',
     price: 'Custom Quote',
-    description: "Got a unique request or need help that doesn't fit the boxes above? Let's talk and figure out a custom solution tailored to your goals.",
+    description: "Got a unique request or need help that doesn't fit the boxes above? Let's have a friendly chat and figure out a custom solution tailored to your goals.",
     includes: "A tailored custom solution designed specifically for your goals and technical requirements.",
     icon: 'HelpCircle',
     linkText: 'Book a Discovery Call',
@@ -357,11 +357,11 @@ export const HOW_IT_WORKS_SECTION = {
   imageHappy: "https://raw.githubusercontent.com/ProfPrompt/askandrew.github.io/refs/heads/main/assets/howtohappy.jpeg",
   
   steps: [
-    "Book a session to pitch your raw application concept, custom workflow tool, or specific AI workspace needs.",
-    "I map out the technical feasibility, validate your architecture logic, and design a lean, actionable build strategy.",
-    "Let's jump onto a live screen share, and I'll code your web app or configure your AI environment right in front of you.",
-    "I'll lock down your exact operational rules, integrate your API keys, and we'll test the functional web app together.",
-    "Leave the call with the actual code for your app, a concrete roadmap, or a tailored AI workspace in a single afternoon."
+    "Book a friendly session to share your goals, website ideas, or repetitive daily chores.",
+    "We'll map out a simple, fast strategy and figure out the easiest way to make it happen.",
+    "We can hop on a live screen-share to build your layout, setup your AI, or customize your site together.",
+    "We'll thoroughly test your new setup to make sure everything works perfectly and feels comfortable.",
+    "You leave our session with a working website, an automated workspace, or the skills to use AI like a pro."
   ]
 };
 
@@ -389,6 +389,7 @@ export interface ShowcaseProject {
   alt: string;
   link: string;
   repo?: string;
+  ctaText?: string;
 }
 
 export const SHOWCASE_SECTION = {
@@ -398,8 +399,19 @@ export const SHOWCASE_SECTION = {
   webDesignTitle: "🎨 Web Design: Templates that don't look like they were made in 1998"
 };
 
-export const SHOWCASE_PROJECTS = {
+export const SHOWCASE_PROJECTS: {
+  webApps: ShowcaseProject[];
+  webDesign: ShowcaseProject[];
+} = {
   webApps: [
+    {
+      title: "Rewind",
+      description: "A personalized discovery environment for tracking down forgotten cult classics and obscure cinema. Skip the mainstream streaming algorithms; this engine uses semantic text mapping to curate highly niche film recommendations based on obscure titles, specific micro-moods, or open-ended prompts.",
+      image: "https://raw.githubusercontent.com/AndrewGWatts/AndrewGWatts.github.io/main/asset/rewind-placeholder.png",
+      alt: "Rewind AI custom workspace film search layout illustration",
+      link: "https://ai.studio/apps/13260ac5-a193-4e63-b85c-8d167b683286?fullscreenApplet=true",
+      ctaText: "Remix in AI Studio ↗"
+    },
     {
       title: "Loading Now...",
       description: "Finally, a way to visualize exactly how much of your decade you’ve spent staring at a progress bar. It tracks your day, week, month, year, and decade, all wrapped in the warm, pixelated nostalgia of the OS interfaces we probably should have left in the 90s.",

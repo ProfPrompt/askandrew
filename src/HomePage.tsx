@@ -596,7 +596,9 @@ export default function HomePage() {
                         <p className="text-gray-600 text-sm font-medium leading-relaxed mb-6 flex-grow">{project.description}</p>
                         <div className="flex gap-4 mt-auto">
                           {project.repo && <a href={project.repo} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider hover:text-brand-secondary transition-colors text-brand-dark"><DynamicIcon name="Github" className="w-4 h-4"/> Repo</a>}
-                          <a href={project.link} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider hover:text-brand-secondary transition-colors text-brand-dark">View Demo &rarr;</a>
+                          <a href={project.link} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider hover:text-brand-secondary transition-colors text-brand-dark">
+                            {project.ctaText || "View Demo \u2192"}
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -621,7 +623,9 @@ export default function HomePage() {
                         <p className="text-gray-600 text-sm font-medium leading-relaxed mb-6 flex-grow">{project.description}</p>
                         <div className="flex gap-4 mt-auto">
                           {project.repo && <a href={project.repo} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider hover:text-brand-secondary transition-colors text-brand-dark"><DynamicIcon name="Github" className="w-4 h-4"/> Repo</a>}
-                          <a href={project.link} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider hover:text-brand-secondary transition-colors text-brand-dark">View Demo &rarr;</a>
+                          <a href={project.link} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider hover:text-brand-secondary transition-colors text-brand-dark">
+                            {project.ctaText || "View Demo \u2192"}
+                          </a>
                         </div>
                       </div>
                     </div>
