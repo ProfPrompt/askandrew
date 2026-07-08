@@ -111,7 +111,7 @@ export const HERO_SECTION = {
 
 export const ABOUT_SECTION = {
   title: "About Andrew",
-  quote: "I help small business owners, startups, and curious builders turn their ideas into custom websites, simple apps, and smart automations. No heavy technical jargon, no six-month roadmaps, and no corporate fluff. I build what you need in under a week, show you exactly how to manage it yourself, and explain everything in plain, friendly English.",
+  quote: "I help small business owners, startups, and curious builders turn their ideas into custom websites, simple apps, and smart automations. No heavy technical jargon, no six-month roadmaps, and no corporate fluff. I build what you need in under a week, show you exactly how to manage it yourself, and explain everything plain and simple.",
   
   avatarUrl: "https://imgx.vipkidstatic.com/global/ter/teacher/avatar/1619214/6e1cafeb00cc472b9a366c08fb82fa9e.png",
   
