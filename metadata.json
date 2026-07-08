@@ -1,6 +1,8 @@
 {
-  "name": "Andrew Watts - AI Consultant",
+  "name": "Remix: askandrew.io",
   "description": "Portfolio and lead-generation website for Andrew Watts, AI Consultant.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
