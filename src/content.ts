@@ -407,7 +407,7 @@ export const SHOWCASE_PROJECTS: {
     {
       title: "Rewind",
       description: "A personalized discovery environment for tracking down forgotten cult classics and obscure cinema. Skip the mainstream streaming algorithms; this engine uses semantic text mapping to curate highly niche film recommendations based on obscure titles, specific micro-moods, or open-ended prompts.",
-      image: "https://raw.githubusercontent.com/AndrewGWatts/AndrewGWatts.github.io/main/asset/rewind.png",
+      image: "https://raw.githubusercontent.com/AndrewGWatts/AndrewGWatts.github.io/main/assets/rewind.png",
       alt: "Rewind AI custom workspace film search layout illustration",
       link: "https://ai.studio/apps/13260ac5-a193-4e63-b85c-8d167b683286?fullscreenApplet=true",
       ctaText: "Remix in AI Studio ↗"
