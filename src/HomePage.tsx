@@ -410,53 +410,8 @@ export default function HomePage() {
 
       <main className="flex-grow">
 
-        {/* 3. ABOUT SECTION */}
-        <section id="about" className="bg-white text-brand-dark py-16 md:py-24 px-4 sm:px-6">
-          <div className="max-w-5xl mx-auto flex flex-col items-center">
-            <h2 className="text-3xl lg:text-4xl font-black text-brand-secondary uppercase tracking-tight mb-10 text-center w-full">
-              {ABOUT_SECTION.title}
-            </h2>
-            
-            <div className="flex flex-col gap-12 items-center w-full mb-10">
-              <div className="w-full text-center">
-                <div className="space-y-6 text-base sm:text-lg text-gray-700 leading-relaxed font-medium">
-                  <div className="bg-brand-primary/5 p-6 sm:p-8 rounded-2xl border-l-4 border-brand-secondary italic text-gray-800">
-                    <p>
-                      "{ABOUT_SECTION.quote}"
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap items-center gap-4 justify-center w-full">
-              <Link to={ABOUT_SECTION.ctaPrimaryLink} className="whitespace-nowrap inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-brand-secondary text-white font-bold text-base hover:bg-brand-dark transition-all shadow-lg uppercase tracking-wide">
-                {ABOUT_SECTION.ctaPrimaryText}
-              </Link>
-              <a href={ABOUT_SECTION.linkedInUrl} target="_blank" rel="noreferrer" className="whitespace-nowrap inline-flex items-center justify-center px-8 py-3.5 rounded-full border-[3px] border-brand-secondary bg-white text-brand-secondary font-bold text-base hover:bg-brand-secondary hover:text-white transition-all uppercase tracking-wide gap-2">
-                <DynamicIcon name={ABOUT_SECTION.ctaSecondaryIcon} className="w-5 h-5" /> {ABOUT_SECTION.ctaSecondaryText}
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* 4. MID-PAGE CTA */}
-        <section className="bg-brand-primary text-white py-24 px-6 text-center relative overflow-hidden">
-          <Watermark />
-          <div className="max-w-3xl mx-auto space-y-8 relative z-10">
-            <h2 className="text-4xl md:text-5xl font-black uppercase leading-none tracking-tight">
-              {MID_PAGE_CTA.title}
-            </h2>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-5 pt-6">
-              <Link to={MID_PAGE_CTA.buttonLink} className="whitespace-nowrap inline-flex items-center justify-center px-8 py-4 rounded-full bg-brand-secondary text-white font-black text-lg hover:bg-brand-dark hover:scale-105 transition-all shadow-2xl uppercase tracking-wide text-center">
-                {MID_PAGE_CTA.buttonText}
-              </Link>
-            </div>
-          </div>
-        </section>
-
         {/* 5. BRING YOUR IDEAS TO LIFE SECTION */}
-        <section className="bg-white text-brand-dark py-12 md:py-24 px-4 sm:px-6">
+        <section id="about" className="bg-white text-brand-dark py-12 md:py-24 px-4 sm:px-6">
           {/* Desktop view */}
           <div className="hidden md:grid max-w-7xl mx-auto grid-cols-[1fr_2fr_1fr] gap-12 items-center text-center">
             <div className="flex justify-center items-center h-full w-full">
