@@ -372,10 +372,10 @@ export default function HomePage() {
                     </AnimatePresence>
                   </span>
                 </h2>
-                <p className="hidden sm:block text-base lg:text-lg mt-5 text-white/80 max-w-lg leading-relaxed font-medium">
+                <p className="hidden sm:block text-lg mt-5 text-white/80 max-w-lg leading-relaxed font-medium">
                   {HERO_SECTION.description}
                 </p>
-                <p className="sm:hidden text-sm mt-1 text-white/80 max-w-md leading-relaxed font-medium text-center px-4 mx-auto">
+                <p className="sm:hidden text-base mt-1 text-white/80 max-w-md leading-relaxed font-medium text-center px-4 mx-auto">
                   {HERO_SECTION.descriptionMobile}
                 </p>
               </div>
