@@ -296,33 +296,26 @@ export default function BookingPage() {
     try {
       const timezoneName = Intl.DateTimeFormat().resolvedOptions().timeZone;
       
-      const response = await fetch('https://api.web3forms.com/submit', {
+      const response = await fetch('/api/submit-request', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Accept': 'application/json'
         },
         body: JSON.stringify({
-          access_key: '00d7763d-64e0-455b-9703-28731d614b31',
           name: formData.name,
           email: formData.email,
-          subject: `Booking Request: ${selectedProduct.title} from ${formData.name}`,
-          service: `${selectedProduct.title} (${selectedProduct.timeLabel})`,
-          price: selectedProduct.price,
+          serviceId: `${selectedProduct.title} (${selectedProduct.timeLabel})`,
           description: formData.description,
-          date_requested: dateInfo,
-          time_slots: `${timeInfo} (${timezoneName})`,
-          replyto: formData.email,
-          to: 'askandrew.io@gmail.com'
+          date: dateInfo,
+          time: `${timeInfo} (${timezoneName})`,
         }),
       });
 
-      const result = await response.json();
-      if (response.ok && result.success) {
+      if (response.ok) {
         setIsSubmitted(true);
         setIsModalOpen(false);
       } else {
-        alert(result.message || "Failed to submit request. Please try again.");
+        alert("Failed to submit request. Please try again.");
       }
     } catch (err) {
       console.error(err);
@@ -562,8 +555,7 @@ export default function BookingPage() {
                   </p>
                 </div>
 
-                <form action="https://api.web3forms.com/submit" method="POST" onSubmit={handleSubmit} className="space-y-6">
-                  <input type="hidden" name="access_key" value="00d7763d-64e0-455b-9703-28731d614b31" />
+                <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Grid Contact Cards */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1.5">

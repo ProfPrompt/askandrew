@@ -78,22 +78,21 @@ export const WATERMARK = {
 
 export const HERO_SECTION = {
   headline: "Ask Andrew",
-  tagline: "Custom Web Apps & Practical AI Support",
+  tagline: "Custom Web Apps & AI Strategy",
   
   // Rotating phrases in the typing-loop sub-header
   phrases: [
-    "to build your new website",
-    "to create your profile site",
-    "to bring your app idea to life",
-    "to teach you how to use AI",
-    "to automate your daily tasks",
-    "to clean up your workflows",
-    "to run a fun workshop",
-    "to stop manual copy-pasting"
+    "to build your website",
+    "to design your app",
+    "to automate your daily work",
+    "to optimize AI for your life",
+    "to connect your software stack",
+    "to solve your tech issues",
+    "to master critical thinking"
   ],
   
-  description: "I help you build simple websites, create personal profiles, design friendly app prototypes, and automate repetitive daily work in under a week. No complex software jargon, no endless meetings, just real tools that work.",
-  descriptionMobile: "I help you build simple websites, create profiles, design friendly app prototypes, and automate daily work in under a week—without the technical jargon.",
+  description: "I build simple websites, create personal profiles, design friendly app prototypes, and automate repetitive daily work in under a week. No complex software jargon, no endless meetings, just real tools that work.",
+  descriptionMobile: "I build simple websites, create personal profiles, design friendly app prototypes, and automate repetitive daily work in under a week. No complex software jargon, no endless meetings, just real tools that work.",
   
   ctaPrimaryText: "Let's Get Started",
   ctaPrimaryLink: "/book",
@@ -111,7 +110,7 @@ export const HERO_SECTION = {
 
 export const ABOUT_SECTION = {
   title: "About Andrew",
-  quote: "I help small business owners, startups, and curious builders turn their ideas into custom websites, simple apps, and smart automations. No heavy technical jargon, no six-month roadmaps, and no corporate fluff. I build what you need in under a week, show you exactly how to manage it yourself, and explain everything plain and simple.",
+  quote: "I work with small business owners, startups, and curious builders to turn their ideas into custom websites, simple apps, and smart automations. No heavy technical jargon, no six-month roadmaps, and no corporate fluff. I build what you need in under a week, show you exactly how to manage it yourself, and explain everything plain and simple.",
   
   avatarUrl: "https://imgx.vipkidstatic.com/global/ter/teacher/avatar/1619214/6e1cafeb00cc472b9a366c08fb82fa9e.png",
   
@@ -241,9 +240,9 @@ export const PRODUCTS: Record<string, Product> = {
   'live-prototyping': {
     id: 'live-prototyping',
     title: 'Custom Websites, Apps & Digital Tools',
-    timeLabel: 'Interactive Web Prototype Sprint',
+    timeLabel: 'Delivered in under a week',
     price: 'Starting from $599',
-    description: "Need a slick new website, app, or tool for your company, brand, or even just to manage your dog's Instagram? I'll use AI to create exactly what you need and want, and then teach you how to manage it yourself so you don't have to keep paying developers to make small updates.",
+    description: "I build a clean, working website or app for your brand or business in under a week. After it is live, I show you how to manage and update it yourself.",
     includes: "A functional, live-hosted web app or site, plus clear instructions so you can easily run it.",
     icon: 'Sparkles',
     linkText: 'Book a Sprint',
@@ -252,9 +251,9 @@ export const PRODUCTS: Record<string, Product> = {
   'custom-workspace': {
     id: 'custom-workspace',
     title: 'Optimizing AI for Work & Daily Life',
-    timeLabel: 'Save Hours of Manual Work',
+    timeLabel: 'Interactive Custom Session',
     price: 'Starting from $299',
-    description: "From daily meal planning to complex spreadsheet hacking, AI can make life so much easier. Let me show you how to use AI to eliminate boring tasks, streamline your manual workflows, and save you hours of typing every single week.",
+    description: "I set up private AI tools and templates to handle your repetitive computer tasks. We will create custom prompts that save you hours of manual typing.",
     includes: "Private, custom-tailored prompts and automated workflows that you can copy-paste and use instantly.",
     icon: 'Bot',
     linkText: 'Get Automated',
@@ -263,9 +262,9 @@ export const PRODUCTS: Record<string, Product> = {
   'app-updates': {
     id: 'app-updates',
     title: 'General Tech Support & Fixes',
-    timeLabel: 'Quick Sync + Delivery within 48 hours',
+    timeLabel: 'Rapid turnaround',
     price: '$75',
-    description: "Got a minor bug, need a small update, or have a general technical issue that is slowing you down? I am here for fast-tracked troubleshooting, simple hosting setups, and friendly tech care.",
+    description: "I fix bugs, make small content updates, and solve general technical issues holding you back. All fixes are completed with a 48-hour turnaround.",
     includes: "Rapid resolution of website or app issues completed with a 48-hour turnaround.",
     icon: 'Wrench',
     linkText: 'Book a Tech Fix',
@@ -274,9 +273,9 @@ export const PRODUCTS: Record<string, Product> = {
   'technical-roadmap': {
     id: 'technical-roadmap',
     title: 'Technical Feasibility & Strategy',
-    timeLabel: '45-Minute Brainstorming Call',
+    timeLabel: '45-Min Session',
     price: '$95',
-    description: "Have a unique app idea or an AI tool concept? Let's stress-test the logic before you spend your savings or months of time. We will vet your concept, map out how it works, and design a lean, fast strategy to bring it to life.",
+    description: "We will review your new app or website idea together to see if it is doable. You will get a clear, step-by-step plan to build it without wasting time or money.",
     includes: "A clear, conversational 45-minute blueprint and an execution plan with zero tech jargon.",
     icon: 'Map',
     linkText: 'Book a Strategy Call',
@@ -287,9 +286,9 @@ export const PRODUCTS: Record<string, Product> = {
   'ai-workshops': {
     id: 'ai-workshops',
     title: 'AI Education & Workshops',
-    timeLabel: '45-Min Lesson',
+    timeLabel: 'Live Personalized Lesson',
     price: '$95',
-    description: "Does AI scare you? Unpack that with me through friendly, one-on-one sessions, active workshops, or group training. Learn how to use it, the pitfalls, the ethics, and how to make it highly practical for your business.",
+    description: "I host practical, one-on-one sessions or group workshops to teach your team how to use AI. Learn how to make these tools actually useful for your daily work.",
     includes: "A live personalized training session, a custom prompt library, and actionable guides.",
     icon: 'BookOpen',
     linkText: 'Book a Session',
@@ -300,7 +299,7 @@ export const PRODUCTS: Record<string, Product> = {
     title: 'Managed Web Care & Hosting',
     timeLabel: 'Ongoing Monthly Support',
     price: 'Starting from $50/mo',
-    description: "Keep your site fast, safe, and up-to-date. Forget about DNS settings, SSL certificates, or server crashes. I handle the under-the-hood stuff so you can focus on running your business.",
+    description: "I keep your website fast, secure, and fully updated with daily backups and security monitoring. You can focus on your business while I handle all the technical details.",
     includes: "High-performance hosting, automated daily backups, security monitoring, and small monthly updates.",
     icon: 'Server',
     linkText: 'Inquire About Hosting',
@@ -309,9 +308,9 @@ export const PRODUCTS: Record<string, Product> = {
   'speaking': {
     id: 'speaking',
     title: 'Speaking, Education... & Chess!',
-    timeLabel: 'Custom Duration',
+    timeLabel: 'Custom Engagement',
     price: 'Starting from $750',
-    description: "Need an engaging, jargon-free speaker to explain technology to your team, or want to master the chessboard? I offer fun presentations, group training events, and friendly chess masterclasses to sharpen your critical thinking.",
+    description: "I give clear, friendly talks about technology and AI for teams, as well as chess lessons to sharpen critical thinking. Every session is interactive and tailored to your audience.",
     includes: "Interactive educational sessions or custom chess lessons for all skill levels.",
     icon: 'Mic',
     linkText: 'Check Availability',
@@ -320,9 +319,9 @@ export const PRODUCTS: Record<string, Product> = {
   'custom-integration': {
     id: 'custom-integration',
     title: 'Connecting Your Software Stack',
-    timeLabel: 'Tailored Scope',
+    timeLabel: 'Tailored Automation',
     price: 'Starting from $399',
-    description: "Tired of manually copy-pasting data between scattered windows? I build simple, custom connections so your spreadsheets, email, and CRMs talk to each other automatically without manual hassle.",
+    description: "I connect your spreadsheets, emails, and software so they share data automatically. This eliminates manual copy-pasting and double-entry between your tools.",
     includes: "Clean, custom connections that sync your favorite digital tools and eliminate double-entry.",
     icon: 'GitMerge',
     linkText: 'Inquire About Integration',
@@ -330,10 +329,10 @@ export const PRODUCTS: Record<string, Product> = {
   },
   'other': {
     id: 'other',
-    title: 'Custom Requests & Help',
+    title: 'Custom / Other Request',
     timeLabel: 'Custom Duration',
     price: 'Custom Quote',
-    description: "Got a unique request or need help that doesn't fit the boxes above? Let's have a friendly chat and figure out a custom solution tailored to your goals.",
+    description: "If you have a unique technical issue or a custom project that does not fit the other categories, we can design a custom solution together.",
     includes: "A tailored custom solution designed specifically for your goals and technical requirements.",
     icon: 'HelpCircle',
     linkText: 'Book a Discovery Call',
@@ -389,14 +388,14 @@ export interface ShowcaseProject {
   alt: string;
   link: string;
   repo?: string;
-  ctaText?: string;
+  linkLabel?: string; // Custom label for link button e.g., 'Remix in AI Studio ↗'
+  linkIcon?: string;  // Optional custom icon name for the main link (e.g. 'Sparkles')
 }
 
 export const SHOWCASE_SECTION = {
   titleSmall: "Featured Work",
   titleLarge: "Showcase",
-  webAppsTitle: "🚀 Web Apps: Because the internet needs more cool stuff",
-  webDesignTitle: "🎨 Web Design: Templates that don't look like they were made in 1998"
+  carouselTitle: "Some of my projects"
 };
 
 export const SHOWCASE_PROJECTS: {
@@ -405,59 +404,60 @@ export const SHOWCASE_PROJECTS: {
 } = {
   webApps: [
     {
-      title: "Rewind",
-      description: "A personalized discovery environment for tracking down forgotten cult classics and obscure cinema. Skip the mainstream streaming algorithms; this engine uses semantic text mapping to curate highly niche film recommendations based on obscure titles, specific micro-moods, or open-ended prompts.",
-      image: "https://raw.githubusercontent.com/AndrewGWatts/AndrewGWatts.github.io/main/assets/rewind.png",
-      alt: "Rewind AI custom workspace film search layout illustration",
-      link: "https://ai.studio/apps/13260ac5-a193-4e63-b85c-8d167b683286?fullscreenApplet=true",
-      ctaText: "Remix in AI Studio ↗"
-    },
-    {
-      title: "Loading Now...",
-      description: "Finally, a way to visualize exactly how much of your decade you’ve spent staring at a progress bar. It tracks your day, week, month, year, and decade, all wrapped in the warm, pixelated nostalgia of the OS interfaces we probably should have left in the 90s.",
-      image: "https://raw.githubusercontent.com/AndrewGWatts/AndrewGWatts.github.io/main/asset/placeholder-loading-now.png",
-      alt: "Loading Now web application project screenshot showing custom web development work",
-      link: "https://loadingnowapp.github.io",
-      repo: "https://github.com/loadingnowapp/loadingnowapp.github.io"
-    },
-    {
       title: "Advantaged Player Trainer",
-      description: "The perfect tool for anyone who wants to lose money at the casino, but slightly slower than everyone else. This app turns your brain into a card-counting machine so you can be the most popular person at the blackjack table, right until security politely asks you to leave.",
-      image: "https://raw.githubusercontent.com/AndrewGWatts/AndrewGWatts.github.io/main/asset/placeholder-advantaged-player-webapp.png",
+      description: "An interactive card-counting simulator designed to train your blackjack strategy. Combines gamified dashboard drills with real-time feedback and performance analytics.",
+      image: "https://andrewgwatts.github.io/asset/placeholder-advantaged-player-webapp.png",
       alt: "Advantaged Player Trainer web app screenshot showing interactive dashboard and analytics",
       link: "https://advantagedplayer.github.io",
       repo: "https://github.com/advantagedplayer/advantagedplayer.github.io"
     },
     {
+      title: "Rewind",
+      description: "A movie discovery engine that bypasses streaming algorithms. Uses semantic text mapping to curate highly niche, forgotten cult classics based on open-ended prompts.",
+      image: "https://raw.githubusercontent.com/ProfPrompt/askandrew.github.io/refs/heads/main/assets/rewind.png",
+      alt: "Rewind AI custom workspace film search layout illustration",
+      link: "https://aistudio.google.com",
+      linkLabel: "Remix in AI Studio ↗",
+      linkIcon: "Sparkles"
+    },
+    {
       title: "Astro Dash",
-      description: "Mashup of a classic shooter and an endless runner. Tap to blast, swipe up or down to dodge, stack that score multiplier, and try not to turn your ship into expensive space junk. Designed for mobile, so you can crash in style anywhere.",
-      image: "https://raw.githubusercontent.com/AndrewGWatts/AndrewGWatts.github.io/main/asset/astro_dash_placeholder.png",
+      description: "An endless retro-arcade space runner. Blast asteroids, dodge obstacles, stack high-score multipliers, and navigate increasingly difficult cosmic hazards.",
+      image: "https://andrewgwatts.github.io/asset/astro_dash_placeholder.png",
       alt: "Astro Dash dashboard screenshot showing custom AI integration and data visualization",
       link: "https://astrodashapp.github.io",
       repo: "https://github.com/astrodashapp/astrodashapp.github.io"
+    },
+    {
+      title: "Loading Now...",
+      description: "A progress-tracking utility that visualizes your day, week, month, year, and decade, wrapped in the nostalgic pixel art of 90s operating system interfaces.",
+      image: "https://andrewgwatts.github.io/asset/placeholder-loading-now.png",
+      alt: "Loading Now web application project screenshot showing custom web development work",
+      link: "https://loadingnowapp.github.io",
+      repo: "https://github.com/loadingnowapp/loadingnowapp.github.io"
     }
   ],
   webDesign: [
     {
       title: "Podcast Producer Profile",
-      description: "A dark, highly stylized landing page for an audio engineer. Built to showcase a portfolio of top-tier podcasts.",
-      image: "https://raw.githubusercontent.com/AndrewGWatts/AndrewGWatts.github.io/main/asset/podcast-producer-site.png",
+      description: "A dark, highly stylized, high-contrast landing page designed for audio engineers to showcase top-tier podcast production portfolios and services.",
+      image: "https://andrewgwatts.github.io/asset/podcast-producer-site.png",
       alt: "Podcast Producer Profile website design showcasing clean responsive layout",
       link: "https://LindsayLafreniere.github.io",
       repo: "https://github.com/LindsayLafreniere/LindsayLafreniere.github.io"
     },
     {
       title: "Developer Portfolio",
-      description: "A minimalist, high-contrast terminal-inspired portfolio designed for software engineers who want their code to speak.",
-      image: "https://raw.githubusercontent.com/AndrewGWatts/AndrewGWatts.github.io/main/asset/developer-portfolio-site.png",
+      description: "A sleek, minimalist, terminal-inspired website portfolio designed for software engineers to showcase their code, technical projects, and expertise.",
+      image: "https://andrewgwatts.github.io/asset/developer-portfolio-site.png",
       alt: "Developer Portfolio website design showing modern aesthetic and dark mode styling",
       link: "https://AndrewGWatts.github.io",
       repo: "https://github.com/AndrewGWatts/AndrewGWatts.github.io"
     },
     {
       title: "LinkSprout",
-      description: "A minimalist, modern \"link-in-bio\" page designed to get your digital footprint organized without the bloat. It's the perfect landing page for when you need a place to stash your links, look professional, and stop sending people a disorganized mess of URLs.",
-      image: "https://raw.githubusercontent.com/AndrewGWatts/AndrewGWatts.github.io/main/asset/linksprout-thumbnail.png",
+      description: "A modern, minimalist 'link-in-bio' landing page designed to organize your digital footprint, stash essential links, and present a clean professional profile.",
+      image: "https://andrewgwatts.github.io/asset/linksprout-thumbnail.png",
       alt: "LinkSprout modern minimalist link-in-bio landing page template screenshot",
       link: "https://linksprout.github.io",
       repo: "https://github.com/LinkSprout/LinkSprout.github.io"
@@ -548,7 +548,7 @@ export const BOOKING_PAGE_SETTINGS = {
   
   fieldLabelDescription: "Tell me about your request",
   fieldIconDescription: "MessageSquare",
-  fieldPlaceholderDescription: "What are you trying to build or achieve? Let's figure out how I can help.",
+  fieldPlaceholderDescription: "What are you trying to build or achieve? Let's figure out how I can make this happen.",
 
   // Scheduling Preference Box
   fieldLabelSchedulePref: "Scheduling Preference",

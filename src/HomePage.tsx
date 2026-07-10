@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { DynamicIcon } from './components/DynamicIcon';
@@ -105,6 +105,150 @@ const HowItWorksGuide = () => {
                <div className="absolute top-0 -left-3 w-3 h-3 bg-white" style={{ clipPath: 'polygon(100% 0, 0 0, 100% 100%)' }}></div>
             </div>
          </div>
+      </div>
+    </div>
+  );
+};
+
+// Auto-scrolling Showcase Carousel
+const ShowcaseCarousel = () => {
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const [isPaused, setIsPaused] = useState(false);
+
+  // Combine both project lists
+  const allProjects = useMemo(() => [
+    ...SHOWCASE_PROJECTS.webApps,
+    ...SHOWCASE_PROJECTS.webDesign
+  ], []);
+
+  // Double the list to make the infinite scroll smooth and seamless
+  const doubledProjects = useMemo(() => [...allProjects, ...allProjects], [allProjects]);
+
+  useEffect(() => {
+    const container = carouselRef.current;
+    if (!container) return;
+
+    let animationFrameId: number;
+    let lastTime = performance.now();
+    const speed = 40; // Pixels per second
+
+    const scroll = (time: number) => {
+      if (!isPaused) {
+        const delta = (time - lastTime) / 1000;
+        container.scrollLeft += speed * delta;
+        
+        // When we scroll past half the width, wrap around smoothly
+        const halfWidth = container.scrollWidth / 2;
+        if (container.scrollLeft >= halfWidth) {
+          container.scrollLeft -= halfWidth;
+        }
+      }
+      lastTime = time;
+      animationFrameId = requestAnimationFrame(scroll);
+    };
+
+    animationFrameId = requestAnimationFrame(scroll);
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [isPaused]);
+
+  // Handle manual navigation
+  const scrollByAmount = (amount: number) => {
+    const container = carouselRef.current;
+    if (!container) return;
+    
+    // Temporarily pause to allow manual transition
+    setIsPaused(true);
+    container.scrollBy({ left: amount, behavior: 'smooth' });
+    
+    // Resume auto-scroll after a delay
+    setTimeout(() => {
+      setIsPaused(false);
+    }, 3000);
+  };
+
+  return (
+    <div className="relative w-full overflow-hidden py-4">
+      {/* Linear gradients on edges to fade out */}
+      <div className="absolute inset-y-0 left-0 w-8 sm:w-24 bg-gradient-to-r from-white to-transparent z-20 pointer-events-none" />
+      <div className="absolute inset-y-0 right-0 w-8 sm:w-24 bg-gradient-to-l from-white to-transparent z-20 pointer-events-none" />
+
+      {/* Manual Controls */}
+      <div className="absolute top-1/2 -translate-y-1/2 left-2 z-30 sm:left-4">
+        <button 
+          onClick={() => scrollByAmount(-350)}
+          className="bg-white/90 hover:bg-white text-brand-dark p-3 rounded-full shadow-lg border border-gray-200 transition-all hover:scale-110 cursor-pointer"
+          aria-label="Scroll Left"
+        >
+          <DynamicIcon name="ChevronLeft" className="w-5 h-5" />
+        </button>
+      </div>
+      <div className="absolute top-1/2 -translate-y-1/2 right-2 z-30 sm:right-4">
+        <button 
+          onClick={() => scrollByAmount(350)}
+          className="bg-white/90 hover:bg-white text-brand-dark p-3 rounded-full shadow-lg border border-gray-200 transition-all hover:scale-110 cursor-pointer"
+          aria-label="Scroll Right"
+        >
+          <DynamicIcon name="ChevronRight" className="w-5 h-5" />
+        </button>
+      </div>
+
+      {/* Scrolling Container */}
+      <div 
+        ref={carouselRef}
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+        onTouchStart={() => setIsPaused(true)}
+        onTouchEnd={() => setIsPaused(false)}
+        className="flex gap-6 overflow-x-auto no-scrollbar py-8 px-6 sm:px-12 select-none"
+        style={{ scrollBehavior: 'auto' }}
+      >
+        {doubledProjects.map((project, i) => (
+          <div 
+            key={`${project.title}-${i}`} 
+            className="bg-gray-50 rounded-3xl overflow-hidden border border-gray-200 hover:border-brand-secondary/50 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group flex flex-col h-[480px] shrink-0 w-[290px] sm:w-[350px] shadow-xl"
+          >
+            <div className="h-44 overflow-hidden relative">
+              <img 
+                src={project.image} 
+                alt={project.alt} 
+                draggable="false"
+                className="w-full h-full object-cover object-left-top transition-transform duration-500 group-hover:scale-105" 
+              />
+              <div className="absolute inset-0 bg-brand-dark/10 group-hover:bg-transparent transition-colors duration-300"></div>
+            </div>
+            <div className="p-6 flex flex-col flex-grow">
+              <h5 className="text-lg sm:text-xl font-black uppercase tracking-tight mb-2 group-hover:text-brand-secondary transition-colors text-brand-dark">
+                {project.title}
+              </h5>
+              <p className="text-gray-600 text-xs sm:text-sm font-medium leading-relaxed mb-4 overflow-y-auto no-scrollbar flex-grow">
+                {project.description}
+              </p>
+              <div className="flex gap-4 mt-auto pt-2 border-t border-gray-100">
+                {project.repo && (
+                  <a 
+                    href={project.repo} 
+                    target="_blank" 
+                    rel="noreferrer" 
+                    className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider hover:text-brand-secondary transition-colors text-brand-dark"
+                  >
+                    <DynamicIcon name="Github" className="w-4 h-4"/> Repo
+                  </a>
+                )}
+                <a 
+                  href={project.link} 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider hover:text-brand-secondary transition-colors text-brand-dark"
+                >
+                  {project.linkIcon && (
+                    <DynamicIcon name={project.linkIcon} className="w-4 h-4 text-brand-secondary shrink-0" />
+                  )}
+                  {project.linkLabel || "View Demo \u2192"}
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
@@ -572,67 +716,14 @@ export default function HomePage() {
 
         {/* 11. PORTFOLIO SHOWCASE SECTION */}
         <section id="projects" className="bg-white text-brand-dark py-24 px-6 relative overflow-hidden">
-          <div className="max-w-7xl mx-auto space-y-16 relative z-10">
+          <div className="max-w-7xl mx-auto space-y-10 relative z-10">
             <div className="text-center space-y-3">
               <h2 className="text-sm lg:text-base font-bold uppercase tracking-[0.2em] text-brand-secondary">{SHOWCASE_SECTION.titleSmall}</h2>
               <h3 className="text-4xl lg:text-5xl font-black uppercase tracking-tight">{SHOWCASE_SECTION.titleLarge}</h3>
+              <p className="text-xl text-gray-600 font-bold max-w-2xl mx-auto">{SHOWCASE_SECTION.carouselTitle}</p>
             </div>
 
-            <div className="space-y-16">
-              {/* Web Apps Showcase Category */}
-              <div className="space-y-8">
-                <h4 className="text-xl sm:text-2xl font-black uppercase tracking-wide border-b-2 border-gray-200 pb-4 text-brand-secondary">
-                  {SHOWCASE_SECTION.webAppsTitle}
-                </h4>
-                <div className="flex overflow-x-auto snap-x snap-mandatory lg:grid lg:grid-cols-3 gap-6 lg:gap-8 py-8 -my-8 -mx-6 px-6 lg:py-0 lg:my-0 lg:mx-0 lg:px-0">
-                  {SHOWCASE_PROJECTS.webApps.map((project, i) => (
-                    <div key={i} className="bg-gray-50 rounded-3xl overflow-hidden border border-gray-200 hover:border-brand-secondary/50 transition-all group flex flex-col h-full shadow-xl snap-center shrink-0 w-[85vw] sm:w-[60vw] md:w-[45vw] lg:w-auto">
-                      <div className="h-48 overflow-hidden relative">
-                        <img src={project.image} alt={project.alt} className="w-full h-full object-cover object-left-top transition-transform duration-500 group-hover:scale-110" />
-                        <div className="absolute inset-0 bg-brand-dark/10 group-hover:bg-transparent transition-colors duration-300"></div>
-                      </div>
-                      <div className="p-6 flex flex-col flex-grow">
-                        <h5 className="text-xl font-black uppercase tracking-tight mb-3 group-hover:text-brand-secondary transition-colors text-brand-dark">{project.title}</h5>
-                        <p className="text-gray-600 text-sm font-medium leading-relaxed mb-6 flex-grow">{project.description}</p>
-                        <div className="flex gap-4 mt-auto">
-                          {project.repo && <a href={project.repo} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider hover:text-brand-secondary transition-colors text-brand-dark"><DynamicIcon name="Github" className="w-4 h-4"/> Repo</a>}
-                          <a href={project.link} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider hover:text-brand-secondary transition-colors text-brand-dark">
-                            {project.ctaText || "View Demo \u2192"}
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Web Design Showcase Category */}
-              <div className="space-y-8">
-                <h4 className="text-xl sm:text-2xl font-black uppercase tracking-wide border-b-2 border-gray-200 pb-4 text-brand-secondary">
-                  {SHOWCASE_SECTION.webDesignTitle}
-                </h4>
-                <div className="flex overflow-x-auto snap-x snap-mandatory lg:grid lg:grid-cols-3 gap-6 lg:gap-8 py-8 -my-8 -mx-6 px-6 lg:py-0 lg:my-0 lg:mx-0 lg:px-0">
-                  {SHOWCASE_PROJECTS.webDesign.map((project, i) => (
-                    <div key={i} className="bg-gray-50 rounded-3xl overflow-hidden border border-gray-200 hover:border-brand-secondary/50 transition-all group flex flex-col h-full shadow-xl snap-center shrink-0 w-[85vw] sm:w-[60vw] md:w-[45vw] lg:w-auto">
-                      <div className="h-48 overflow-hidden relative">
-                        <img src={project.image} alt={project.alt} className="w-full h-full object-cover object-left-top transition-transform duration-500 group-hover:scale-110" />
-                        <div className="absolute inset-0 bg-brand-dark/10 group-hover:bg-transparent transition-colors duration-300"></div>
-                      </div>
-                      <div className="p-6 flex flex-col flex-grow">
-                        <h5 className="text-xl font-black uppercase tracking-tight mb-3 group-hover:text-brand-secondary transition-colors text-brand-dark">{project.title}</h5>
-                        <p className="text-gray-600 text-sm font-medium leading-relaxed mb-6 flex-grow">{project.description}</p>
-                        <div className="flex gap-4 mt-auto">
-                          {project.repo && <a href={project.repo} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider hover:text-brand-secondary transition-colors text-brand-dark"><DynamicIcon name="Github" className="w-4 h-4"/> Repo</a>}
-                          <a href={project.link} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider hover:text-brand-secondary transition-colors text-brand-dark">
-                            {project.ctaText || "View Demo \u2192"}
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <ShowcaseCarousel />
           </div>
         </section>
 
