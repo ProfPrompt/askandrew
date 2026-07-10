@@ -109,7 +109,7 @@ export const HERO_SECTION = {
 // ============================================================================
 
 export const ABOUT_SECTION = {
-  title: "About Andrew",
+  
   quote: "I work with small business owners, startups, and curious builders to turn their ideas into custom websites, simple apps, and smart automations. No heavy technical jargon, no six-month roadmaps, and no corporate fluff. I build what you need in under a week, show you exactly how to manage it yourself, and explain everything plain and simple.",
   
   avatarUrl: "https://imgx.vipkidstatic.com/global/ter/teacher/avatar/1619214/6e1cafeb00cc472b9a366c08fb82fa9e.png",
@@ -307,11 +307,11 @@ export const PRODUCTS: Record<string, Product> = {
   },
   'speaking': {
     id: 'speaking',
-    title: 'Speaking, Education... & Chess!',
+    title: 'Speaking & Education',
     timeLabel: 'Custom Engagement',
     price: 'Starting from $750',
-    description: "I give clear, friendly talks about technology and AI for teams, as well as chess lessons to sharpen critical thinking. Every session is interactive and tailored to your audience.",
-    includes: "Interactive educational sessions or custom chess lessons for all skill levels.",
+    description: "I give clear, friendly talks about technology and AI for teams. Every session is interactive and tailored to your audience.",
+    includes: "Interactive educational sessions for all skill levels.",
     icon: 'Mic',
     linkText: 'Check Availability',
     link: '/book/speaking'
