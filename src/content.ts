@@ -87,8 +87,7 @@ export const HERO_SECTION = {
     "to automate your daily work",
     "to optimize AI for your life",
     "to connect your software stack",
-    "to solve your tech issues",
-    "to master critical thinking"
+    "to solve your tech issues"
   ],
   
   description: "I build simple websites, create personal profiles, design friendly app prototypes, and automate repetitive daily work in under a week. No complex software jargon, no endless meetings, just real tools that work.",
@@ -157,7 +156,10 @@ export const IDEAS_SECTION = {
 export const SECONDARY_PROTOTYPE_CTA = {
   title: "GET A WORKING WEBSITE BY NEXT WEEK.",
   buttonText: "Book a Live Session",
-  buttonLink: "/book"
+  buttonLink: "/book",
+  buttonSecondaryText: "Connect on LinkedIn",
+  buttonSecondaryIcon: "Linkedin",
+  linkedInUrl: "https://www.linkedin.com/in/agwatts/"
 };
 
 // ============================================================================
@@ -236,107 +238,98 @@ export const BOOKING_MENU_SECTION = {
 
 // Main product dictionary - ordered chronologically by category
 export const PRODUCTS: Record<string, Product> = {
-  // Main Products
-  'live-prototyping': {
-    id: 'live-prototyping',
-    title: 'Custom Websites, Apps & Digital Tools',
+  // Main Products (Websites & Custom Tools)
+  'one-page-site': {
+    id: 'one-page-site',
+    title: 'Simple Website, Profile, or App',
     timeLabel: 'Delivered in under a week',
-    price: 'Starting from $599',
-    description: "I build a clean, working website or app for your brand or business in under a week. After it is live, I show you how to manage and update it yourself.",
-    includes: "A functional, live-hosted web app or site, plus clear instructions so you can easily run it.",
+    price: 'Starting at €299',
+    description: "I build a simple, responsive one-page website, professional bio profile, or clear custom application to showcase your work, capture leads, or automate a specific manual task.",
+    includes: "A gorgeous, live-hosted landing page with your custom content, forms, and setup assistance.",
     icon: 'Sparkles',
-    linkText: 'Book a Sprint',
-    link: '/book/live-prototyping'
+    linkText: 'Book a Simple Project',
+    link: '/book/one-page-site'
   },
-  'custom-workspace': {
-    id: 'custom-workspace',
-    title: 'Optimizing AI for Work & Daily Life',
-    timeLabel: 'Interactive Custom Session',
-    price: 'Starting from $299',
-    description: "I set up private AI tools and templates to handle your repetitive computer tasks. We will create custom prompts that save you hours of manual typing.",
-    includes: "Private, custom-tailored prompts and automated workflows that you can copy-paste and use instantly.",
-    icon: 'Bot',
-    linkText: 'Get Automated',
-    link: '/book/custom-workspace'
+  'multi-page-site': {
+    id: 'multi-page-site',
+    title: 'Complex Website, Web App, or Prototype',
+    timeLabel: 'Delivered in under a week',
+    price: 'Starting at €499',
+    description: "I design and build a multi-page website, feature-rich custom application, or product prototype to help launch your service, run complex operations, or test your product concept with real data.",
+    includes: "A custom multi-page structure, complete user flows, custom database connectivity, and launch guidance.",
+    icon: 'Layers',
+    linkText: 'Book a Complex Project',
+    link: '/book/multi-page-site'
   },
-  'app-updates': {
-    id: 'app-updates',
-    title: 'General Tech Support & Fixes',
-    timeLabel: 'Rapid turnaround',
-    price: '$75',
-    description: "I fix bugs, make small content updates, and solve general technical issues holding you back. All fixes are completed with a 48-hour turnaround.",
-    includes: "Rapid resolution of website or app issues completed with a 48-hour turnaround.",
-    icon: 'Wrench',
-    linkText: 'Book a Tech Fix',
-    link: '/book/app-updates'
+  
+  // Legacy mappings for safe backwards compatibility
+  'micro-tool': {
+    id: 'one-page-site',
+    title: 'Simple Website, Profile, or App',
+    timeLabel: 'Delivered in under a week',
+    price: 'Starting at €299',
+    description: "I build a simple, responsive one-page website, professional bio profile, or clear custom application to showcase your brand, collect leads, or automate a specific manual task.",
+    includes: "A gorgeous, live-hosted landing page with your custom content, forms, and setup assistance.",
+    icon: 'Sparkles',
+    linkText: 'Book a Simple Project',
+    link: '/book/one-page-site'
   },
-  'technical-roadmap': {
-    id: 'technical-roadmap',
-    title: 'Technical Feasibility & Strategy',
-    timeLabel: '45-Min Session',
-    price: '$95',
-    description: "We will review your new app or website idea together to see if it is doable. You will get a clear, step-by-step plan to build it without wasting time or money.",
-    includes: "A clear, conversational 45-minute blueprint and an execution plan with zero tech jargon.",
-    icon: 'Map',
-    linkText: 'Book a Strategy Call',
-    link: '/book/technical-roadmap'
+  'full-prototype': {
+    id: 'multi-page-site',
+    title: 'Complex Website, Web App, or Prototype',
+    timeLabel: 'Delivered in under a week',
+    price: 'Starting at €499',
+    description: "I design and build a multi-page website, feature-rich custom application, or product prototype to help launch your service, run complex operations, or test your product concept with real data.",
+    includes: "A custom multi-page structure, complete user flows, custom database connectivity, and launch guidance.",
+    icon: 'Layers',
+    linkText: 'Book a Complex Project',
+    link: '/book/multi-page-site'
   },
   
   // Additional / Secondary Products
-  'ai-workshops': {
-    id: 'ai-workshops',
-    title: 'AI Education & Workshops',
-    timeLabel: 'Live Personalized Lesson',
-    price: '$95',
-    description: "I host practical, one-on-one sessions or group workshops to teach your team how to use AI. Learn how to make these tools actually useful for your daily work.",
-    includes: "A live personalized training session, a custom prompt library, and actionable guides.",
-    icon: 'BookOpen',
-    linkText: 'Book a Session',
-    link: '/book/ai-strategy-workshops'
-  },
-  'managed-hosting': {
-    id: 'managed-hosting',
-    title: 'Managed Web Care & Hosting',
-    timeLabel: 'Ongoing Monthly Support',
-    price: 'Starting from $50/mo',
-    description: "I keep your website fast, secure, and fully updated with daily backups and security monitoring. You can focus on your business while I handle all the technical details.",
-    includes: "High-performance hosting, automated daily backups, security monitoring, and small monthly updates.",
+  'hosting-maintenance': {
+    id: 'hosting-maintenance',
+    title: 'Hosting & Maintenance',
+    timeLabel: 'Ongoing Support',
+    price: 'Starting at €50/mo',
+    description: "I keep your website or application running smoothly, fast, secure, and up-to-date with domain setup, routine checks, and priority support. Ready to keep your online presence stable, secure, and high-performing.",
+    includes: "Domain maintenance, performance monitoring, regular updates, and direct support when you need a quick change.",
     icon: 'Server',
     linkText: 'Inquire About Hosting',
-    link: '/book/managed-hosting'
+    link: '/book/hosting-maintenance'
   },
-  'speaking': {
-    id: 'speaking',
-    title: 'Speaking, Education... & Chess!',
+  'tech-support': {
+    id: 'tech-support',
+    title: 'Support & Custom Fixes',
+    timeLabel: 'Rapid turnaround',
+    price: '€75/hr',
+    description: "I fix bugs, update content, optimize performance, build custom integrations, or solve unique technical issues holding you back. Ready to step in and keep your digital tools operating reliably.",
+    includes: "Rapid technical diagnostic, bug fixing, and custom code or workflow modifications.",
+    icon: 'Wrench',
+    linkText: 'Book Support & Fixes',
+    link: '/book/tech-support'
+  },
+  'strategy-call': {
+    id: 'strategy-call',
+    title: 'Tech Feasibility & Strategy Call',
+    timeLabel: '45-Min Session',
+    price: '€95',
+    description: "We will review your software, website, or app idea to see if it is doable. You will leave with a clear, step-by-step roadmap to build it without wasting time or money.",
+    includes: "A structured, straightforward strategy call, live brainstorming, and a clear written execution blueprint.",
+    icon: 'Map',
+    linkText: 'Book a Strategy Call',
+    link: '/book/strategy-call'
+  },
+  'workshops-speaking': {
+    id: 'workshops-speaking',
+    title: 'Group Workshops & Speaking Events',
     timeLabel: 'Custom Engagement',
-    price: 'Starting from $750',
-    description: "I give clear, friendly talks about technology and AI for teams, as well as chess lessons to sharpen critical thinking. Every session is interactive and tailored to your audience.",
-    includes: "Interactive educational sessions or custom chess lessons for all skill levels.",
+    price: 'Starting from €499',
+    description: "I host interactive practical workshops or deliver clear, engaging presentations about automated systems, team productivity, and smart technology integration.",
+    includes: "A tailored educational session or keynote, interactive slides or custom guides, and live Q&A.",
     icon: 'Mic',
-    linkText: 'Check Availability',
-    link: '/book/speaking'
-  },
-  'custom-integration': {
-    id: 'custom-integration',
-    title: 'Connecting Your Software Stack',
-    timeLabel: 'Tailored Automation',
-    price: 'Starting from $399',
-    description: "I connect your spreadsheets, emails, and software so they share data automatically. This eliminates manual copy-pasting and double-entry between your tools.",
-    includes: "Clean, custom connections that sync your favorite digital tools and eliminate double-entry.",
-    icon: 'GitMerge',
-    linkText: 'Inquire About Integration',
-    link: '/book/custom-integration'
-  },
-  'other': {
-    id: 'other',
-    title: 'Custom / Other Request',
-    timeLabel: 'Custom Duration',
-    price: 'Custom Quote',
-    description: "If you have a unique technical issue or a custom project that does not fit the other categories, we can design a custom solution together.",
-    includes: "A tailored custom solution designed specifically for your goals and technical requirements.",
-    icon: 'HelpCircle',
-    linkText: 'Book a Discovery Call',
-    link: '/book/other'
+    linkText: 'Book a Session',
+    link: '/book/workshops-speaking'
   }
 };
 
@@ -346,7 +339,7 @@ export const PRODUCTS: Record<string, Product> = {
 
 export const HOW_IT_WORKS_SECTION = {
   title: "How it works",
-  bubbleSad: "Can you help?",
+  bubbleSad: "Can you do it?",
   bubbleDrew: "No problem!",
   bubbleHappy: "Totally worth it!",
   
@@ -356,11 +349,11 @@ export const HOW_IT_WORKS_SECTION = {
   imageHappy: "https://raw.githubusercontent.com/ProfPrompt/askandrew.github.io/refs/heads/main/assets/howtohappy.jpeg",
   
   steps: [
-    "Book a friendly session to share your goals, website ideas, or repetitive daily chores.",
-    "We'll map out a simple, fast strategy and figure out the easiest way to make it happen.",
-    "We can hop on a live screen-share to build your layout, setup your AI, or customize your site together.",
-    "We'll thoroughly test your new setup to make sure everything works perfectly and feels comfortable.",
-    "You leave our session with a working website, an automated workspace, or the skills to use AI like a pro."
+    "Choose your service level and book a session. After booking, we will meet on a video call to discuss your goals, requirements, and tech strategy.",
+    "We'll map out a solid plan of action tailored to your needs—whether it's a website, web app, hosting, maintenance, or custom support.",
+    "I build, migrate, or optimize your solution in the background, keeping you fully updated on progress along the way.",
+    "We jump on a live screen-share to review the final build, test the integrations, and make sure everything is perfect.",
+    "Your new website, application, or workflow goes live, and you walk away with a highly functional, fully optimized digital platform."
   ]
 };
 
@@ -390,6 +383,7 @@ export interface ShowcaseProject {
   repo?: string;
   linkLabel?: string; // Custom label for link button e.g., 'Remix in AI Studio ↗'
   linkIcon?: string;  // Optional custom icon name for the main link (e.g. 'Sparkles')
+  projectType: string;
 }
 
 export const SHOWCASE_SECTION = {
@@ -400,7 +394,7 @@ export const SHOWCASE_SECTION = {
 
 export const SHOWCASE_PROJECTS: {
   webApps: ShowcaseProject[];
-  webDesign: ShowcaseProject[];
+  websites: ShowcaseProject[];
 } = {
   webApps: [
     {
@@ -409,7 +403,8 @@ export const SHOWCASE_PROJECTS: {
       image: "https://andrewgwatts.github.io/asset/placeholder-advantaged-player-webapp.png",
       alt: "Advantaged Player Trainer web app screenshot showing interactive dashboard and analytics",
       link: "https://advantagedplayer.github.io",
-      repo: "https://github.com/advantagedplayer/advantagedplayer.github.io"
+      repo: "https://github.com/advantagedplayer/advantagedplayer.github.io",
+      projectType: "Mobile Game"
     },
     {
       title: "Rewind",
@@ -418,7 +413,8 @@ export const SHOWCASE_PROJECTS: {
       alt: "Rewind AI custom workspace film search layout illustration",
       link: "https://aistudio.google.com",
       linkLabel: "Remix in AI Studio ↗",
-      linkIcon: "Sparkles"
+      linkIcon: "Sparkles",
+      projectType: "Web App"
     },
     {
       title: "Astro Dash",
@@ -426,7 +422,8 @@ export const SHOWCASE_PROJECTS: {
       image: "https://andrewgwatts.github.io/asset/astro_dash_placeholder.png",
       alt: "Astro Dash dashboard screenshot showing custom AI integration and data visualization",
       link: "https://astrodashapp.github.io",
-      repo: "https://github.com/astrodashapp/astrodashapp.github.io"
+      repo: "https://github.com/astrodashapp/astrodashapp.github.io",
+      projectType: "Mobile Game"
     },
     {
       title: "Loading Now...",
@@ -434,25 +431,8 @@ export const SHOWCASE_PROJECTS: {
       image: "https://andrewgwatts.github.io/asset/placeholder-loading-now.png",
       alt: "Loading Now web application project screenshot showing custom web development work",
       link: "https://loadingnowapp.github.io",
-      repo: "https://github.com/loadingnowapp/loadingnowapp.github.io"
-    }
-  ],
-  webDesign: [
-    {
-      title: "Podcast Producer Profile",
-      description: "A dark, highly stylized, high-contrast landing page designed for audio engineers to showcase top-tier podcast production portfolios and services.",
-      image: "https://andrewgwatts.github.io/asset/podcast-producer-site.png",
-      alt: "Podcast Producer Profile website design showcasing clean responsive layout",
-      link: "https://LindsayLafreniere.github.io",
-      repo: "https://github.com/LindsayLafreniere/LindsayLafreniere.github.io"
-    },
-    {
-      title: "Developer Portfolio",
-      description: "A sleek, minimalist, terminal-inspired website portfolio designed for software engineers to showcase their code, technical projects, and expertise.",
-      image: "https://andrewgwatts.github.io/asset/developer-portfolio-site.png",
-      alt: "Developer Portfolio website design showing modern aesthetic and dark mode styling",
-      link: "https://AndrewGWatts.github.io",
-      repo: "https://github.com/AndrewGWatts/AndrewGWatts.github.io"
+      repo: "https://github.com/loadingnowapp/loadingnowapp.github.io",
+      projectType: "Web App"
     },
     {
       title: "LinkSprout",
@@ -460,7 +440,37 @@ export const SHOWCASE_PROJECTS: {
       image: "https://andrewgwatts.github.io/asset/linksprout-thumbnail.png",
       alt: "LinkSprout modern minimalist link-in-bio landing page template screenshot",
       link: "https://linksprout.github.io",
-      repo: "https://github.com/LinkSprout/LinkSprout.github.io"
+      repo: "https://github.com/LinkSprout/LinkSprout.github.io",
+      projectType: "Web App"
+    }
+  ],
+  websites: [
+    {
+      title: "Podcast Producer Profile",
+      description: "A dark, highly stylized, high-contrast landing page designed for audio engineers to showcase top-tier podcast production portfolios and services.",
+      image: "https://andrewgwatts.github.io/asset/podcast-producer-site.png",
+      alt: "Podcast Producer Profile website design showcasing clean responsive layout",
+      link: "https://LindsayLafreniere.github.io",
+      repo: "https://github.com/LindsayLafreniere/LindsayLafreniere.github.io",
+      projectType: "Website"
+    },
+    {
+      title: "Developer Portfolio",
+      description: "A sleek, minimalist, terminal-inspired website portfolio designed for software engineers to showcase their code, technical projects, and expertise.",
+      image: "https://andrewgwatts.github.io/asset/developer-portfolio-site.png",
+      alt: "Developer Portfolio website design showing modern aesthetic and dark mode styling",
+      link: "https://AndrewGWatts.github.io",
+      repo: "https://github.com/AndrewGWatts/AndrewGWatts.github.io",
+      projectType: "Website"
+    },
+    {
+      title: "Teacher Profile",
+      description: "A bright, friendly, and highly customized personal profile website designed for teachers and educators to showcase lesson materials, classroom values, and tutoring services.",
+      image: "https://raw.githubusercontent.com/ProfPrompt/askandrew.github.io/refs/heads/main/assets/teacher.jpg",
+      alt: "Teacher Profile website design showing friendly custom layout for educators",
+      link: "https://teacherkaren.xyz",
+      repo: "https://github.com/profprompt/teacherkaren",
+      projectType: "Website"
     }
   ]
 };
@@ -522,13 +532,13 @@ export const BOOKING_PAGE_SETTINGS = {
 
   // Goals Dropdown Configuration - Editable goals and their recommended products matches!
   goalsList: [
-    { id: 'build-website', label: 'Build my website or web app', recommendedProductIds: ['live-prototyping', 'app-updates', 'managed-hosting'] },
-    { id: 'talk-app-idea', label: 'Talk about an app idea & strategy', recommendedProductIds: ['technical-roadmap', 'other'] },
-    { id: 'design-app', label: 'Work with me to design an app', recommendedProductIds: ['live-prototyping', 'technical-roadmap'] },
-    { id: 'automate-tasks', label: 'Automate my daily tasks & workflows', recommendedProductIds: ['custom-workspace', 'custom-integration', 'ai-workshops'] },
-    { id: 'speaking-gig', label: 'Book a speaking or educational gig', recommendedProductIds: ['speaking'] },
-    { id: 'other-help', label: 'Other custom request', recommendedProductIds: ['other'] },
-    { id: 'all-services', label: 'All services', recommendedProductIds: ['live-prototyping', 'custom-workspace', 'app-updates', 'technical-roadmap', 'ai-workshops', 'managed-hosting', 'speaking', 'custom-integration', 'other'] }
+    { id: 'goal-simple', label: 'Build a Simple Website, Profile, or App (Starting at €299)', recommendedProductIds: ['one-page-site', 'strategy-call'] },
+    { id: 'goal-complex', label: 'Build a Complex Website, Web App, or Prototype (Starting at €499)', recommendedProductIds: ['multi-page-site', 'strategy-call'] },
+    { id: 'goal-strategy', label: 'Schedule a Tech Feasibility & Strategy Call (€95)', recommendedProductIds: ['strategy-call'] },
+    { id: 'goal-maintenance', label: 'Get Website Hosting & Maintenance (Starting at €50/mo)', recommendedProductIds: ['hosting-maintenance'] },
+    { id: 'goal-fix', label: 'Get Support & Custom Fixes (€75/hr)', recommendedProductIds: ['tech-support'] },
+    { id: 'goal-workshops', label: 'Group Workshops & Speaking (Starting at €499)', recommendedProductIds: ['workshops-speaking', 'strategy-call'] },
+    { id: 'all-services', label: 'Show all service levels & options (€50 - €499+)', recommendedProductIds: ['one-page-site', 'multi-page-site', 'strategy-call', 'hosting-maintenance', 'tech-support', 'workshops-speaking'] }
   ] as BookingGoal[],
 
   // Modal Step Headers

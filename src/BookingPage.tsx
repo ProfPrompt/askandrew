@@ -25,30 +25,32 @@ export default function BookingPage() {
     if (!serviceId) {
       return { 
         goalId: 'all-services', 
-        productId: 'live-prototyping' 
+        productId: 'one-page-site' 
       };
     }
     
     // Map URL service ID to closest Product and Goal
-    if (serviceId === 'live-prototyping') {
-      return { goalId: 'build-website', productId: 'live-prototyping' };
-    } else if (serviceId === 'custom-workspace') {
-      return { goalId: 'automate-tasks', productId: 'custom-workspace' };
-    } else if (serviceId === 'app-updates') {
-      return { goalId: 'build-website', productId: 'app-updates' };
-    } else if (serviceId === 'technical-roadmap') {
-      return { goalId: 'talk-app-idea', productId: 'technical-roadmap' };
-    } else if (serviceId === 'ai-strategy-workshops') {
-      return { goalId: 'automate-tasks', productId: 'ai-workshops' };
-    } else if (serviceId === 'managed-hosting') {
-      return { goalId: 'build-website', productId: 'managed-hosting' };
-    } else if (serviceId === 'speaking') {
-      return { goalId: 'speaking-gig', productId: 'speaking' };
-    } else if (serviceId === 'custom-integration') {
-      return { goalId: 'automate-tasks', productId: 'custom-integration' };
+    if (serviceId === 'one-page-site') {
+      return { goalId: 'goal-simple', productId: 'one-page-site' };
+    } else if (serviceId === 'multi-page-site') {
+      return { goalId: 'goal-complex', productId: 'multi-page-site' };
+    } else if (serviceId === 'micro-tool') {
+      return { goalId: 'goal-simple', productId: 'one-page-site' };
+    } else if (serviceId === 'full-prototype') {
+      return { goalId: 'goal-complex', productId: 'multi-page-site' };
+    } else if (serviceId === 'hosting-maintenance') {
+      return { goalId: 'goal-maintenance', productId: 'hosting-maintenance' };
+    } else if (serviceId === 'workshops-speaking') {
+      return { goalId: 'goal-workshops', productId: 'workshops-speaking' };
+    } else if (serviceId === 'tech-support') {
+      return { goalId: 'goal-fix', productId: 'tech-support' };
+    } else if (serviceId === 'strategy-call') {
+      return { goalId: 'goal-strategy', productId: 'strategy-call' };
+    } else if (serviceId === 'other') {
+      return { goalId: 'goal-fix', productId: 'tech-support' };
     }
     
-    return { goalId: 'all-services', productId: 'other' };
+    return { goalId: 'all-services', productId: 'tech-support' };
   }, [serviceId]);
 
   const [selectedGoalId, setSelectedGoalId] = useState<string>(initialSetup.goalId);
@@ -100,12 +102,12 @@ export default function BookingPage() {
   }, [selectedGoalId, recommendedProducts, selectedProductId]);
 
   const selectedProduct = useMemo(() => {
-    return PRODUCTS[selectedProductId] || PRODUCTS['other'];
+    return PRODUCTS[selectedProductId] || PRODUCTS['tech-support'];
   }, [selectedProductId]);
 
   const productDuration = useMemo(() => {
     if (!selectedProductId) return 1;
-    if (selectedProductId === 'live-prototyping') return 2;
+    if (selectedProductId === 'full-prototype' || selectedProductId === 'multi-page-site') return 2;
     return 1;
   }, [selectedProductId]);
 
@@ -493,6 +495,11 @@ export default function BookingPage() {
               <p className="text-sm font-bold text-brand-secondary">
                 {BOOKING_PAGE_SETTINGS.step3RateLabel}: {selectedProduct.price} • {selectedProduct.timeLabel}
               </p>
+              {(selectedProductId === 'one-page-site' || selectedProductId === 'multi-page-site') && (
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 text-emerald-700 rounded-lg text-xs font-bold uppercase tracking-wider mt-2 border border-emerald-200/50">
+                  <span>45-Min Feasibility Call Included</span>
+                </div>
+              )}
             </div>
             
             <div className="flex flex-col items-center md:items-end gap-3 w-full md:w-auto">
@@ -556,6 +563,25 @@ export default function BookingPage() {
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Feasibility Call Info Box */}
+                  {(selectedProductId === 'one-page-site' || selectedProductId === 'multi-page-site') && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="bg-brand-secondary/5 border-2 border-brand-secondary/20 rounded-2xl p-4 text-sm text-brand-dark/90 font-medium"
+                    >
+                      <div className="flex items-center gap-2 mb-1.5">
+                        <span className="text-base">💡</span>
+                        <h4 className="font-black uppercase text-brand-secondary tracking-wider text-xs">
+                          45-Min Feasibility Call Included
+                        </h4>
+                      </div>
+                      <p className="text-gray-600 text-xs sm:text-sm leading-relaxed font-medium">
+                        The scheduling preference you select below is for our initial <strong>45-minute Feasibility & Strategy Call</strong>. We will refine your project requirements together, then I will build and deliver the product. If we determine the project isn't feasible during our call, you only pay for that strategy portion (€95) instead of the full amount.
+                      </p>
+                    </motion.div>
+                  )}
+
                   {/* Grid Contact Cards */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1.5">

@@ -110,6 +110,12 @@ const HowItWorksGuide = () => {
   );
 };
 
+const projectTypeIcons: Record<string, string> = {
+  "Web App": "Cpu",
+  "Website": "Globe",
+  "Mobile Game": "Gamepad2"
+};
+
 // Auto-scrolling Showcase Carousel
 const ShowcaseCarousel = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
@@ -118,7 +124,7 @@ const ShowcaseCarousel = () => {
   // Combine both project lists
   const allProjects = useMemo(() => [
     ...SHOWCASE_PROJECTS.webApps,
-    ...SHOWCASE_PROJECTS.webDesign
+    ...SHOWCASE_PROJECTS.websites
   ], []);
 
   // Double the list to make the infinite scroll smooth and seamless
@@ -223,6 +229,10 @@ const ShowcaseCarousel = () => {
               <p className="text-gray-600 text-xs sm:text-sm font-medium leading-relaxed mb-4 overflow-y-auto no-scrollbar flex-grow">
                 {project.description}
               </p>
+              <div className="inline-flex items-center gap-1 bg-brand-secondary/5 text-brand-secondary/80 text-[10px] font-black uppercase tracking-widest px-2.5 py-1 rounded self-start mb-3">
+                <DynamicIcon name={projectTypeIcons[project.projectType] || "Sparkles"} className="w-3.5 h-3.5 shrink-0" />
+                <span>{project.projectType}</span>
+              </div>
               <div className="flex gap-4 mt-auto pt-2 border-t border-gray-100">
                 {project.repo && (
                   <a 
@@ -243,7 +253,11 @@ const ShowcaseCarousel = () => {
                   {project.linkIcon && (
                     <DynamicIcon name={project.linkIcon} className="w-4 h-4 text-brand-secondary shrink-0" />
                   )}
-                  {project.linkLabel || "View Demo \u2192"}
+                  {project.linkLabel || (
+                    project.projectType === "Website" ? "View Site \u2192" :
+                    project.projectType === "Mobile Game" ? "Play Game \u2192" :
+                    project.projectType === "Web App" ? "Try App \u2192" : "View Demo \u2192"
+                  )}
                 </a>
               </div>
             </div>
@@ -470,6 +484,9 @@ export default function HomePage() {
               <Link to={SECONDARY_PROTOTYPE_CTA.buttonLink} className="whitespace-nowrap inline-flex items-center justify-center px-8 py-4 rounded-full bg-brand-secondary text-white font-black text-lg hover:bg-brand-dark hover:scale-105 transition-all shadow-2xl uppercase tracking-wide text-center">
                 {SECONDARY_PROTOTYPE_CTA.buttonText}
               </Link>
+              <a href={SECONDARY_PROTOTYPE_CTA.linkedInUrl} target="_blank" rel="noreferrer" className="whitespace-nowrap inline-flex items-center justify-center px-8 py-4 rounded-full border-[3px] border-brand-secondary bg-white text-brand-secondary font-black text-lg hover:bg-brand-secondary hover:text-white hover:scale-105 transition-all shadow-2xl uppercase tracking-wide gap-2 text-center">
+                <DynamicIcon name={SECONDARY_PROTOTYPE_CTA.buttonSecondaryIcon} className="w-6 h-6" /> {SECONDARY_PROTOTYPE_CTA.buttonSecondaryText}
+              </a>
             </div>
           </div>
         </section>
@@ -559,10 +576,10 @@ export default function HomePage() {
                 
                 <div className="flex-grow flex flex-col space-y-8">
                   {[
-                    PRODUCTS['live-prototyping'],
-                    PRODUCTS['custom-workspace'],
-                    PRODUCTS['app-updates'],
-                    PRODUCTS['technical-roadmap']
+                    PRODUCTS['one-page-site'],
+                    PRODUCTS['multi-page-site'],
+                    PRODUCTS['strategy-call'],
+                    PRODUCTS['hosting-maintenance']
                   ].map((service) => {
                     if (!service) return null;
                     return (
@@ -624,10 +641,8 @@ export default function HomePage() {
               
               <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
                 {[
-                  PRODUCTS['ai-workshops'],
-                  PRODUCTS['managed-hosting'],
-                  PRODUCTS['speaking'],
-                  PRODUCTS['custom-integration']
+                  PRODUCTS['tech-support'],
+                  PRODUCTS['workshops-speaking']
                 ].map((service) => {
                   if (!service) return null;
                   return (

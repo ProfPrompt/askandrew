@@ -4,7 +4,7 @@ import {
   Sparkles, Bot, Wrench, Map, BookOpen, Server, Mic, GitMerge, HelpCircle,
   Calendar, Clock, Check, ChevronDown, AlertCircle, ArrowLeft, User, Mail, MessageSquare,
   ArrowRight, Code, Award, Zap, Briefcase, Heart, Phone, MapPin, Activity, FileText, Globe, Terminal, Sliders, Cpu, Layers, Settings,
-  ChevronLeft, ChevronRight
+  ChevronLeft, ChevronRight, Gamepad2, Smartphone
 } from 'lucide-react';
 
 // Unified Icon Map supporting all standard and customized sections across the site.
@@ -13,7 +13,7 @@ export const IconMap: Record<string, React.ComponentType<any>> = {
   Sparkles, Bot, Wrench, Map, BookOpen, Server, Mic, GitMerge, HelpCircle,
   Calendar, Clock, Check, ChevronDown, AlertCircle, ArrowLeft, User, Mail, MessageSquare,
   ArrowRight, Code, Award, Zap, Briefcase, Heart, Phone, MapPin, Activity, FileText, Globe, Terminal, Sliders, Cpu, Layers, Settings,
-  ChevronLeft, ChevronRight
+  ChevronLeft, ChevronRight, Gamepad2, Smartphone
 };
 
 interface DynamicIconProps {
