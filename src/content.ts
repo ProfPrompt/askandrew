@@ -90,7 +90,7 @@ export const HERO_SECTION = {
     "to solve your tech issues"
   ],
   
-  description: "I build simple websites, create personal profiles, design friendly app prototypes, and automate repetitive daily work in under a week. No complex software jargon, no endless meetings, just real tools that work.",
+  description: "I build simple websites, create personal profiles, design friendly app prototypes, and automate repetitive daily work in under a week. No endless meetings, just real tools that work.",
   descriptionMobile: "I build simple websites, create personal profiles, design friendly app prototypes, and automate repetitive daily work in under a week. No complex software jargon, no endless meetings, just real tools that work.",
   
   ctaPrimaryText: "Let's Get Started",
